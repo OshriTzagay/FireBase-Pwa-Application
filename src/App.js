@@ -3,6 +3,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import Login from "./Components/login-compo/Login";
 import Register from "./Components/register-compo/Register";
+import { FirebaseProvider } from "./Contexts/firebase-context";
 
 function App() {
   return (
@@ -10,10 +11,10 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
       </header>
-      <Login />
-      <hr />
-      <Register />
-      <button>Gmail Register</button>
+      {/* //!-----------------------------------------------------//> */}
+      <FirebaseProvider>
+        <Register />
+      </FirebaseProvider>
     </div>
   );
 }
